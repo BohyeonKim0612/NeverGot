@@ -15,6 +15,19 @@ body {
     color: black; /* 텍스트 색상 */
   }
 
+.nevergot {
+    position: fixed;
+    max-width: 800px;
+    top: 25px;
+    left: calc(20% - 100px);
+    z-index: 1000;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
 h2 {
     text-align: right;
 }
@@ -69,8 +82,8 @@ img {
 
 .image-container {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     overflow: hidden;
   }
 

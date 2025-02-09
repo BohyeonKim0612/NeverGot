@@ -17,16 +17,23 @@
 		<div class="image-container">
 			<img src="earth.png" class="image" width="35%">
 		</div>
-		<p>2023년 한 해 동안 대한민국에서 발생한 폐기물은 17,619만톤이다. 
-			한 해 동안 발생한 폐기물을 대한민국 땅 위에 골고루 펼치면, 1평 남짓한 면적에 5.8kg이 달하는 양의 폐기물이 쌓이는 양이다. 
-			감히 가늠하기도 힘든 양의 폐기물이 매년 발생되고 처리되고 있다.</p>
-			<br>
-			<br>
+		<div class="text-container">
+			<p>2023년 한 해 동안 대한민국에서 발생한 폐기물은 17,619만톤이다. 한 해 동안 발생한 폐기물을 대한민국 땅 위에 골고루 펼치면, 1평 남짓한 면적에 5.8kg이 달하는 양의 폐기물이 쌓이는 양이다. 감히 가늠하기도 힘든 양의 폐기물이 매년 발생되고 처리되고 있다.</p>
+		</div>
 	</section>
 
 	<section class="center-layout">	
-		<h1>쓰레기의 정의(定義)</h1>
-		<p>쓰레기의 정의에 대한 문장을 한 두 문장정도 훅으로 넣어봅시다 비록 제가 필력은 딸리지만 디자인 해야하니 아무말이나 입을 털어봅니다. 정말 유감이네요 하하.</p>
+		<p>
+			우리는 매일 쓰레기를 만들고 버린다.<br>
+			너무나도 익숙하게 일련의 '버려진' 것들을 쓰레기봉투로 포장하고, 그것을 너무나도 자연스럽게 쓰레기라 부른다.<br>
+			그러나, 우린 과연 쓰레기가 무엇인지 정말로 알고 있는가? <strong>쓰레기의 정의(定義)</strong>를 알고 있는가? <br>
+			실제로 우리 주변에서 버려지는 것들이 무엇인지, 얼마나 있는지 알고 있는가? <br>
+			공적인 절차 속에서는 폐기물(廢棄物)이라 불리는 쓰레기.
+			<br>이들은 우리 생각보다도 복잡하고, 거대하고, 어려운 사물이었다.
+		</p>
+		<div class="floating-image">
+			<img src="trashbag.png" class="image" width="25%">
+		</div>
 	</section>
 
 	<section class="split-layout">
@@ -38,7 +45,8 @@
 			<div class="title">
 				<h1>폐기물 분류</h1>
 				<p>
-					한국에서 만들어지는 쓰레기는 1987년부터 <mark>폐기물 관리법</mark>에 의해 관리되고 있다. 
+					한국에서 만들어지는 쓰레기는 1987년부터 <span class="highlight" onclick="window.open('https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%ED%8F%90%EA%B8%B0%EB%AC%BC%EA%B4%80%EB%A6%AC%EB%B2%95', '_blank')">
+					폐기물관리법</span>에 의해 관리되고 있다. 
 					폐기물 관리법은 폐기물을 
 					크게 <strong>사업장폐기물</strong>과 <strong>생활폐기물</strong>로 나누고 있다.  
 					사업장폐기물은 유해한 화학 물질과 같이 주변 환경을 오염시킬 위험이 있는 <strong>지정폐기물</strong>, 
@@ -53,6 +61,18 @@
 				</p>
 			</div>
 		</div>
+		<style>
+		.highlight {
+            background-color: rgba(255, 223, 88, 0.5);
+            cursor: pointer;
+            transition: text-decoration-color 0.3s ease-in-out;
+        }
+
+        .highlight:hover {
+            text-decoration-color: rgb(255, 255, 255); /* 호버 시 색상 변경 */
+        }
+		</style>
+		
 
 	</section>
 
@@ -110,18 +130,18 @@
 				</p> 
 		</div>
 	</section>
-	<section class="split-layout">
-		<div class="full-width">
-			<div class="chart-container">
-				<h1>사업장배출시설계폐기물 성상별 비율</h1>
-				<img src="industry_chart.png" alt="비율" class="top-chart">
-				<img src="industry_chart_recycle.png" alt="재활용" class="bottom-chart">
-				<p>마우스를 올리면 재활용률이 나타납니다.</p>
-			</div>
+
+	<section class="normal-layout">
+		<div class="chart-container">
+			<h1>사업장배출시설계폐기물 성상별 비율</h1>
+			<img src="industry_chart.png" alt="비율" class="top-chart">
+			<img src="industry_chart_recycle.png" alt="재활용" class="bottom-chart">
+			<p>마우스를 올리면 재활용률이 나타납니다.</p>
 		</div>
 		<div class="card-container">
 			<img id="changingCard" src="card1.png" alt="변하는 이미지" onclick="changeCard()">
 		</div>
+
 		<script>
 						// 이미지 리스트
 			const images = [
@@ -140,7 +160,7 @@
 			}
 		</script>
 
-		<div class="split-item">
+		<div class="text-container">
 			<p>
 				전체 사업장배출시설계 폐기물 중 가장 많은 비중을 차지하는 세 가지는 순서대로 광재류, 오니류, 연소잔재물이다. 이 세가지만 합쳐도 전체의 반을 넘어선다.
 				금속 제련 과정에서 나오는 재 덩어리인 광재류, 하수처리 과정이나 각종 유기/무기물 공정에서 나오는 오수를 가라앉힌 진흙인 오니, 원료나 폐기물을 태우고 남은 재인 연소잔재물은 모두 폐기물임을 모른다면 돌과 흙으로 보이는 것들이다.
@@ -149,7 +169,9 @@
 				쓸모를 다하고 버려지는 생활폐기물과 달리, 복잡한 공정 속에서 만들어지고 다시 또 다른 공정 안으로 들어가는 사업장폐기물은 우리가 잘 모르는 곳에서 하나의 생태계를 이루고 있었다.</p>
 		</div>
 	</section>
-
+	<a href="1_home.html" class="nevergot">
+		<img src="nevergot.png" alt="홈으로 이동" class="logo">
+		</a>
 	<a href="3_re.html"><div class="beyond-world"></div></a>
 
 </body>
