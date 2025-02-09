@@ -1,88 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
 /* 전체 레이아웃 */
 body {
     margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
     padding: 0 5%;
-    max-width: 1200px;
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    line-height: 1.7;
+    max-width: 60%;
+    font-family: Gowun Dodum;
+    font-size: 18px;
+    line-height: 1.8;
     word-break:keep-all;
-    background-color: whitesmoke; /* 부드러운 배경 */
+    background-color: snow; /* 부드러운 배경 */
     color: black; /* 텍스트 색상 */
   }
-  
-  /* 분할 레이아웃 */
-  .split-layout {
-    display: flex; /* 가로 방향 정렬 */
-    flex-wrap: wrap; /* 화면이 좁아지면 요소가 아래로 내려감 */
-    height: 100vh; /* 화면 전체 높이 */
-    padding: 20px;
-    gap: 20px; /* 요소 간 간격 */
+
+h2 {
+    text-align: right;
+}
+
+p {
+    text-align: justify;
+}
+
+img {
+    width: 50%;
+    align-self: center;
+}
+
+.car:hover {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: moveLeft 3s linear forwards;
+  }
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .car img {
+    width: 150px;
+    height: auto;
+  }
+
+.floating-image:hover {
+    animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.image-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    overflow: hidden;
+  }
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.top-image {
+    z-index: 2;
+    opacity: 1;
+}
+
+.image-container:hover .top-image {
+    opacity: 0;
+}
+
+.bottom-image {
+    z-index: 1;
+    opacity: 1;
+}
+
+.caption {
+    position: absolute;
+    top: 10%; /* 말풍선이 이미지 위쪽에 위치 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* 말풍선 배경색 */
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    opacity: 0; /* 기본적으로 숨김 */
+    visibility: hidden; /* 화면에서 보이지 않도록 설정 */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
   }
   
-  /* 왼쪽 이미지 영역 */
-  .image-container {
-    flex: 1; /* 이미지가 컨테이너의 50% 차지 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* 말풍선 꼬리 */
+  .caption::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* 말풍선 꼬리를 아래쪽에 배치 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.8); /* 꼬리 색상 */
   }
   
-  .image-container img {
-    max-width: 100%; /* 이미지가 영역을 벗어나지 않도록 */
-    max-height: 100%; /* 이미지 높이 제한 */
+  /* 호버 시 캡션 표시 */
+  .image-container:hover .caption {
+    opacity: 1;
+    visibility: visible; /* 캡션을 표시 */
   }
-  
-  /* 오른쪽 텍스트 영역 */
-  .text-container {
-    flex: 1; /* 텍스트가 컨테이너의 50% 차지 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 텍스트를 세로 가운데 정렬 */
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 20px;
-  }
-  
-  .h1, h2 {
-    font-family: "Hahmlet", serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: black; /* 제목 색상 */
-  }
-  
-  .text-container p {
-    line-height: 1.6; /* 읽기 쉬운 줄 간격 */
-    font-size: 20px;
-    color: #333;
-  }
-  
-  /* 일반 섹션 */
-  .normal-layout {
-    padding: 20px;
-    background-color: inherit;
-  }
-  
-  .normal-layout p {
-    flex: 1; /* 텍스트가 컨테이너의 50% 차지 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 텍스트를 세로 가운데 정렬 */
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 20px;
-  }
-  
-  .division-line {
+
+.division-line {
     border-top: 1px solid black;
   }
   
-  .beyond-world {
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.section {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 80px;
+    transition: background-color 0.3s ease;
+}
+
+.title {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.content {
+    position: absolute;
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    transition: opacity 0.3 ease;
+}
+
+.section:hover {
+    background-color: #f0f0f0;
+}
+
+.section:hover .title {
+    opacity: 0;
+}
+
+.section:hover .content {
+    display: flex;
+    opacity: 1;
+}
+
+.division-line {
+    border-top: 1px solid black;
+  }
+
+.beyond-world {
     position: fixed;
     display: flex;
     max-width: 800px;
     margin: 0 auto;
-    margin-left: -25px;
+    margin-left: 10px;
     left: 50%;
     top: 25px;
     width: 50px;
@@ -99,7 +218,7 @@ body {
   
   .beyond-world:hover {
     transition: 0.5s;
-    background-color: gold;
+    background-color: orangered;
   }
   
   @media screen and (min-width: 800px) {
@@ -115,16 +234,3 @@ body {
       background-color:#232323;
     }
   }
-  
-  @media (max-width: 768px) {
-    .split-layout {
-      flex-direction: column; /* 화면이 작으면 세로 정렬 */
-    }
-  
-    .image-container,
-    .text-container {
-      flex: none; /* 비율 해제 */
-      width: 100%; /* 각각 100% 차지 */
-    }
-  }
-  
