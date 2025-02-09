@@ -1,0 +1,184 @@
+/* Pretendard 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+@font-face {
+  font-family: 'GabiaOndam-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/GabiaOndam-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  /*background-image: url('Section-all-gray.png');
+  background-repeat: repeat;*/
+  background-color: lightgray;
+  background-position: center;
+  background-attachment: fixed; /* 배경 고정 */
+  background-size: cover; /* 전체 배경 유지 */
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+/* 컨텐츠 로드 영역 */
+.container {
+  width: 90%;
+  height: 100%;
+  max-width: 90%;
+  margin: auto;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 컨텐츠 상단 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  position: relative;
+  text-align: center;
+}
+
+/* 컨텐츠 내부 스타일 */
+
+/* 제목 영역 */
+.title {
+  width: 90%;
+  margin: auto;
+  margin-top: none;
+  height: 40px;
+  display: flex;
+  padding-left: 60px;
+  padding-top: 60px;
+  padding-bottom: 10px;
+  font-family: 'GabiaOndam-Regular';
+  font-weight: normal;
+  font-size: 32px;
+  color: #222;
+  text-align: center;
+  z-index: 1000; /* 다른 요소보다 위에 배치 */
+  position: fixed;
+  background-color: lightgray;
+  align-items: center;
+}
+
+/* 컨텐츠 영역 */
+.content {
+  display: flex;
+  flex-direction: row;
+  height: auto; /* 제목 높이만큼 조정 */
+  margin: auto;
+  padding-top: 60px; /* 제목 높이 + 여유 공간 추가 */
+  gap: 30px;
+  line-height: 1.6;
+  font-family: 'Pretendard';
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+
+.left-panel {
+  flex: 1;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 30px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+
+.content h1 {
+  font-family: 'GabiaOndam-Regular';
+  font-weight: normal;
+  font-size: 32px; /* 큰 제목 크기 */
+  color: #222; /* 제목 색상 */
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.content h2 {
+  font-family: 'GabiaOndam-Regular';
+  font-weight: normal;
+  font-size: 22px; /* 큰 제목 크기 */
+  color: #222; /* 제목 색상 */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.content h3 {
+  font-family: 'GabiaOndam-Regular';
+  font-weight: bold;
+  font-size: 16px; /* 큰 제목 크기 */
+  color: #222; /* 제목 색상 */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.content p {
+  line-height: 1.8;
+  font-family: 'Pretendard';
+  font-size: 18px;
+  color: #222; /* 제목 색상 */
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.quote {
+  line-height: 1.8;
+  font-family: 'Pretendard';
+  font-size: 18px; /* 큰 제목 크기 */
+  color: #222; /* 제목 색상 */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking-text {
+  animation: blink 0.01s infinite; /* 1초 간격으로 무한 반복 */
+}
+
+.toggle-btn {
+  font-family: 'GabiaOndam-Regular';
+  font-weight: bold;
+  font-size: 22px;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  animation: blink 2s infinite;
+  background: none;
+}
+
+.toggle-btn:hover {
+  visibility: none;
+}
+
+.title-btn {
+  font-family: 'GabiaOndam-Regular';
+  font-weight: normal;
+  font-size: 32px;
+  color: #222;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.title-btn:hover {
+  visibility: none;
+}

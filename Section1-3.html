@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Never Got</title>
+	<link rel="stylesheet" href="Section-bottom-bar.css">
+	<link rel="stylesheet" href="Section1-3.css">
+	<link rel="stylesheet" href="Section1-3_graph.css">
+
+</head>
+
+<body>
+<!-- 하단바
+	<div class="bottom-bar">
+    	<ul>
+       		<li><a href="1_intro.html">Home</a></li>
+        	<li><a href="2_movingtrash.html">Movingtrash</a></li>
+        	<li><a href="3_recycle.html">Recycle</a></li>
+        	<li><a href="4_factory.html">Factory</a></li>
+        	<li><a href="5_outro.html">Outro</a></li>
+    	</ul>
+	</div>
+-->
+
+<body>
+	<div class="container">
+		<div class="title">
+			쓰레기 관리하기
+		</div>
+        <div class="content">
+            <h3>
+                우리의 삶 속에서 쓰고 버린 일회용품, 휴지, 포장재 등 익숙한 생활폐기물과는 달리 사업장폐기물은 발생과 처리 모두가 일상과 먼 곳에서 일어난다.
+                <br>
+                그러나 이 낯선 존재인 사업장폐기물은 전체 폐기물의 89%에 달하는 거대한 폐기물 생태를 이루고 있다.
+                <br>
+                사업장폐기물을 구성하는 <strong>건설폐기물</strong>, <strong>지정폐기물</strong>, <strong>사업장배출시설계폐기물</strong>은 우리가 모르는 채 만들어지고 처리되고 있었다.
+            </h3>
+            <br>
+            <p>
+                건설폐기물은 건축 및 토목공사 과정에서 발생하는 폐기물이다. 주로 폐콘크리트, 폐아스팔트, 폐벽돌 등의 건설폐재류가 대부분을 차지하고 있다. 건설폐기물은 앞서 살펴본 처리 비율을 보았을 때 90% 이상이 재활용된다. 대부분의 건설폐재류는 다시 건설 자재로 활용되기 때문이다. 수많은 건축물을 허물어 생긴 폐기물이 새로운 건축물로 재탄생된다. 지정폐기물은 환경 혹은 인체에 유해한 영향을 미칠 수 있다고 판단되는 폐기물을 따로 지정하여 처리하기 위해 만들어진 분류로, 의료폐기물과 유해한 화학물질 등을 포함한다.
+            </p>
+            <br>
+            <h2>산업 공정에서 '만들어지는' 폐기물</h2>
+            <h3>
+                마지막 한 가지, <strong>사업장배출시설계폐기물</strong>은 분류 체계를 통해서도, 정의를 통해서도 쉽사리 와닿지 않는다. 흔히 <strong>산업폐기물</strong>이라고도 불리는 이 폐기물은 전체 폐기물의 거의 절반에 달하는 47%를 차지하고 있는 존재이다.
+            </h3>
+        </div>
+
+        <div class="bar-container">
+            <div class="bar">
+                <div class="bar-section" onclick="toggleDetails(0)">
+                    <h1>광재</h1>
+                    <p>33%</p>
+                </div>
+                <div class="bar-section" onclick="toggleDetails(1)">
+                    <h1>오니</h1>
+                    <p>20%</p>
+                </div>
+                <div class="bar-section" onclick="toggleDetails(2)">
+                    <h1>연소잔재물</h1>
+                    <p>11%</p>
+                </div>
+                <div class="bar-section" onclick="toggleDetails(3)">
+                    <h1>폐합성수지</h1>
+                    <p>11%</p>
+                </div>
+                <div class="bar-section" onclick="toggleDetails(4)">
+                    <h1>그 외</h1>
+                    <p>26%</p>
+                </div>
+            </div>
+            <div class="details">
+                <div class="details-content">
+                    <h1>광재류</h1>
+                    <h2>23년도 매립률은 5.0%로 약 888만톤에 해당한다.</h2>
+                    <p>
+                        매립이란 폐기물을 매립지에 묻는 것을 말한다.<br>
+                        매립은 폐기물을 바로 매립하는 직접 매립과, 중간 처분을 거친 후 묻는 간접 매립으로 나뉜다.
+                        흔히들 매립은 분해될 수 있는 쓰레기들이 묻혀 땅 속에서 분해되는 과정이라고 생각한다. 그러나 매립되는 많은 폐기물들은 더 이상 분해될 수 없는 것들인 경우가 많다. 다 태우고 남은 재나 태울 수 없는 물질이 향하는 곳이기 때문이다. 분해될 수 있었던 것들도 산소가 잘 통하지 않는 매립지 특성상 거의 분해되지 않는다.<br>
+                        그렇기에 매립은 쓰레기를 땅에 <strong>묻는</strong> 행위가 아니라, 땅에 <strong>쌓아올리는</strong> 행위이다.
+                        <br>
+                        <br>
+                        <img src="landfill_image.jpg" class="image" width="800px">
+
+                    </p>
+                </div>
+            </div>
+            <div class="details">
+                <div class="details-content">
+                    <h1>소각<img src="icon_incineration.png" class="image" width="80px"></h1>
+                    <h2>23년도 소각률은 5.6%로 약 984만톤에 해당한다.</h2>
+                    <p>
+                        매립이란 폐기물을 매립지에 묻는 것을 말한다.<br>
+                        매립은 폐기물을 바로 매립하는 직접 매립과, 중간 처분을 거친 후 묻는 간접 매립으로 나뉜다.
+                        흔히들 매립은 분해될 수 있는 쓰레기들이 묻혀 땅 속에서 분해되는 과정이라고 생각한다. 그러나 매립되는 많은 폐기물들은 더 이상 분해될 수 없는 것들인 경우가 많다. 다 태우고 남은 재나 태울 수 없는 물질이 향하는 곳이기 때문이다. 분해될 수 있었던 것들도 산소가 잘 통하지 않는 매립지 특성상 거의 분해되지 않는다.<br>
+                        그렇기에 매립은 쓰레기를 땅에 <strong>묻는</strong> 행위가 아니라, 땅에 <strong>쌓아올리는</strong> 행위이다.
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="details-content">
+                    <h1>재활용<img src="icon_recycle.png" class="image" width="80px"></h1>
+                    <h2>23년도 폐기물의 처리방법 중 재활용이 가장 높은 비율을 나타내며,<br>물질재활용 79.8%, 에너지 회수 6.2%로 총 86.0%이다. </h2>
+                    <p>
+                        매립이란 폐기물을 매립지에 묻는 것을 말한다.<br>
+                        매립은 폐기물을 바로 매립하는 직접 매립과, 중간 처분을 거친 후 묻는 간접 매립으로 나뉜다.
+                        흔히들 매립은 분해될 수 있는 쓰레기들이 묻혀 땅 속에서 분해되는 과정이라고 생각한다. 그러나 매립되는 많은 폐기물들은 더 이상 분해될 수 없는 것들인 경우가 많다. 다 태우고 남은 재나 태울 수 없는 물질이 향하는 곳이기 때문이다. 분해될 수 있었던 것들도 산소가 잘 통하지 않는 매립지 특성상 거의 분해되지 않는다.<br>
+                        그렇기에 매립은 쓰레기를 땅에 <strong>묻는</strong> 행위가 아니라, 땅에 <strong>쌓아올리는</strong> 행위이다.
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="details-content">
+                    <h1>재활용<img src="icon_recycle.png" class="image" width="80px"></h1>
+                    <h2>23년도 폐기물의 처리방법 중 재활용이 가장 높은 비율을 나타내며,<br>물질재활용 79.8%, 에너지 회수 6.2%로 총 86.0%이다. </h2>
+                    <p>
+                        매립이란 폐기물을 매립지에 묻는 것을 말한다.<br>
+                        매립은 폐기물을 바로 매립하는 직접 매립과, 중간 처분을 거친 후 묻는 간접 매립으로 나뉜다.
+                        흔히들 매립은 분해될 수 있는 쓰레기들이 묻혀 땅 속에서 분해되는 과정이라고 생각한다. 그러나 매립되는 많은 폐기물들은 더 이상 분해될 수 없는 것들인 경우가 많다. 다 태우고 남은 재나 태울 수 없는 물질이 향하는 곳이기 때문이다. 분해될 수 있었던 것들도 산소가 잘 통하지 않는 매립지 특성상 거의 분해되지 않는다.<br>
+                        그렇기에 매립은 쓰레기를 땅에 <strong>묻는</strong> 행위가 아니라, 땅에 <strong>쌓아올리는</strong> 행위이다.
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="details-content">
+                    <h1>재활용<img src="icon_recycle.png" class="image" width="80px"></h1>
+                    <h2>23년도 폐기물의 처리방법 중 재활용이 가장 높은 비율을 나타내며,<br>물질재활용 79.8%, 에너지 회수 6.2%로 총 86.0%이다. </h2>
+                    <p>
+                        매립이란 폐기물을 매립지에 묻는 것을 말한다.<br>
+                        매립은 폐기물을 바로 매립하는 직접 매립과, 중간 처분을 거친 후 묻는 간접 매립으로 나뉜다.
+                        흔히들 매립은 분해될 수 있는 쓰레기들이 묻혀 땅 속에서 분해되는 과정이라고 생각한다. 그러나 매립되는 많은 폐기물들은 더 이상 분해될 수 없는 것들인 경우가 많다. 다 태우고 남은 재나 태울 수 없는 물질이 향하는 곳이기 때문이다. 분해될 수 있었던 것들도 산소가 잘 통하지 않는 매립지 특성상 거의 분해되지 않는다.<br>
+                        그렇기에 매립은 쓰레기를 땅에 <strong>묻는</strong> 행위가 아니라, 땅에 <strong>쌓아올리는</strong> 행위이다.
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <script src="Section1-3_graph.js"></script>
+        </div>
+
+	</div>
+</body>
+</html>
